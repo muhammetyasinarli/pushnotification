@@ -5,7 +5,14 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddMassTransit(x =>
 {
-    x.UsingRabbitMq();
+    x.UsingRabbitMq((context, cfg) =>
+    {
+        cfg.Host("rabbitmq", "/", h =>
+        {
+            h.Username("guest");
+            h.Password("guest");
+        });
+    });
 });
 
 builder.Services.AddMassTransitHostedService();

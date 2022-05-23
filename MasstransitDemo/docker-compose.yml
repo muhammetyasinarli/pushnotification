@@ -3,6 +3,37 @@ version: '3.4'
 services:
   producer:
     image: ${DOCKER_REGISTRY-}producer
+    container_name: producer
     build:
       context: .
       dockerfile: Producer/Dockerfile
+    networks:
+      - publisher-network
+
+  worker:
+    image: worker
+    container_name: worker
+    build:
+      context: .
+      dockerfile: Consumer/Dockerfile
+    restart: always
+    depends_on:
+      - "producer"
+      - "rabbitmq"
+    networks:
+      - publisher-network
+
+  rabbitmq: # login guest:guest
+    container_name: rabbitmq
+    image: rabbitmq:3-management
+    hostname: "rabbitmq"
+    labels:
+      NAME: "rabbitmq"
+    ports:
+      - 5672:5672
+      - 15672:15672
+    networks:
+      - publisher-network
+
+networks:
+      publisher-network:

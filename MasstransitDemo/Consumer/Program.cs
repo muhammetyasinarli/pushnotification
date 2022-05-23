@@ -3,6 +3,11 @@ using MassTransit;
 
 var busControl = Bus.Factory.CreateUsingRabbitMq(cfg =>
 {
+    cfg.Host("rabbitmq", "/", h =>
+    {
+        h.Username("guest");
+        h.Password("guest");
+    });
     cfg.ReceiveEndpoint("order-created-event", e =>
     {
         e.Consumer<OrderCreatedConsumer>();

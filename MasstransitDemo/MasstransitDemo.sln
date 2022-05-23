@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32505.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedModels", "SharedModels\SharedModels.csproj", "{7FDF1F99-2EDD-440A-90C9-538FC76242DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedModels", "SharedModels\SharedModels.csproj", "{7FDF1F99-2EDD-440A-90C9-538FC76242DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Producer", "Producer\Producer.csproj", "{37BD3087-22CB-4CDB-A8BC-3EEB2000C4AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Producer", "Producer\Producer.csproj", "{37BD3087-22CB-4CDB-A8BC-3EEB2000C4AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumer", "Consumer\Consumer.csproj", "{FE46C583-8661-45C6-9F48-33367BBB8CD5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Consumer", "Consumer\Consumer.csproj", "{FE46C583-8661-45C6-9F48-33367BBB8CD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{277DC0C1-2A36-4A0B-8AA2-E64864387A95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTest", "UnitTest\UnitTest.csproj", "{277DC0C1-2A36-4A0B-8AA2-E64864387A95}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{C742EE22-8B6C-43FC-8DE4-26349C77639F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{277DC0C1-2A36-4A0B-8AA2-E64864387A95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{277DC0C1-2A36-4A0B-8AA2-E64864387A95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{277DC0C1-2A36-4A0B-8AA2-E64864387A95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C742EE22-8B6C-43FC-8DE4-26349C77639F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C742EE22-8B6C-43FC-8DE4-26349C77639F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C742EE22-8B6C-43FC-8DE4-26349C77639F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C742EE22-8B6C-43FC-8DE4-26349C77639F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
